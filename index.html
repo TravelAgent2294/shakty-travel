@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shakty Travel | Agen Travel & Tour Profesional</title>
+  <meta name="description" content="Shakty Travel - Agen travel dan tour terpercaya untuk paket liburan, honeymoon, dan perjalanan keluarga. Hubungi 085863189020 untuk konsultasi gratis.">
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-soft: #38bdf8;
+      --accent: #f97316;
+      --bg: #020617;
+      --card: #020617;
+      --muted: #9ca3af;
+      --text: #e5e7eb;
+      --radius: 18px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.96),
+        rgba(15, 23, 42, 0.82),
+        transparent
+      );
+      border-bottom: 1px solid rgba(30, 64, 175, 0.65);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0.7rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 160deg,
+        #38bdf8,
+        #fb923c,
+        #22c55e,
+        #38bdf8
+      );
+      padding: 2px;
+      box-shadow: 0 0 24px rgba(56, 189, 248, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 0, #0ea5e9, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #e0f2fe;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .logo-title {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-size: 0.98rem;
+      text-transform: uppercase;
+    }
+
+    .logo-sub {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.3rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+      color: var(--muted);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #38bdf8, #fb923c);
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: #e5e7eb;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), rgba(15, 23, 42, 0.96));
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #e0f2fe;
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.6);
+      white-space: nowrap;
+    }
+
+    .nav-cta span {
+      font-size: 0.9rem;
+    }
+
+    .nav-cta small {
+      font-size: 0.72rem;
+      color: #bae6fd;
+    }
+
+    /* LAYOUT */
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3.5rem;
+    }
+
+    section {
+      padding: 3.3rem 0;
+      border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .section-title span {
+      background: linear-gradient(to right, #38bdf8, #22c55e, #fb923c);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 580px;
+      font-size: 0.96rem;
+      margin-bottom: 2rem;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.8rem;
+      align-items: center;
+      padding-top: 2.5rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.22rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), rgba(15, 23, 42, 0.95));
+      font-size: 0.78rem;
+      color: #bae6fd;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(22, 163, 74, 0.9);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 3vw + 1.5rem, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #38bdf8, #fb923c);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 520px;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-text strong {
+      color: #e5e7eb;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 0.65rem 1.3rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      white-space: nowrap;
+      transition: transform 0.16s ease-out, box-shadow 0.16s ease-out, background 0.16s ease-out, border-color 0.16s ease-out;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #38bdf8, #fb923c);
+      color: white;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.75);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.96);
+      border-color: rgba(51, 65, 85, 0.9);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      color: #e5e7eb;
+      border-color: rgba(148, 163, 184, 0.95);
+      transform: translateY(-1px);
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .hero-metrics span {
+      display: block;
+      color: #e5e7eb;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    /* HERO VISUAL */
+    .hero-visual {
+      position: relative;
+      min-height: 280px;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -12%;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.25);
+      transform: rotate(-6deg);
+      pointer-events: none;
+    }
+
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #facc15, #fb923c);
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.9);
+    }
+
+    .hero-card-main {
+      position: relative;
+      z-index: 2;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(251, 146, 60, 0.25), transparent 55%),
+        #020617;
+      border-radius: 24px;
+      padding: 1.35rem 1.3rem;
+      border: 1px solid rgba(30, 64, 175, 0.9);
+      box-shadow: var(--shadow-soft);
+      max-width: 380px;
+      margin-left: auto;
+      overflow: hidden;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.7rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-card-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .hero-card-sub {
+      font-size: 0.78rem;
+      color: #cbd5f5;
+    }
+
+    .hero-badge {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: rgba(22, 163, 74, 0.18);
+      color: #bbf7d0;
+      border: 1px solid rgba(34, 197, 94, 0.6);
+    }
+
+    .hero-badge-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+    }
+
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 0.7rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-photo-large {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      position: relative;
+    }
+
+    .hero-photo-large img {
+      height: 170px;
+      width: 100%;
+      object-fit: cover;
+      filter: saturate(1.15) contrast(1.05);
+      transform: scale(1.02);
+    }
+
+    .hero-photo-pill {
+      position: absolute;
+      inset: auto 10px 10px 10px;
+      background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
+      border-radius: 999px;
+      padding: 0.18rem 0.7rem;
+      font-size: 0.72rem;
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+    }
+
+    .hero-photo-pill span {
+      color: #bfdbfe;
+    }
+
+    .hero-photo-small-col {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .hero-photo-small {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.38);
+      position: relative;
+    }
+
+    .hero-photo-small img {
+      height: 77px;
+      width: 100%;
+      object-fit: cover;
+      filter: saturate(1.08);
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-card-stat-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #64748b;
+    }
+
+    .hero-card-stat-value {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .hero-chip {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.8);
+      color: #e5e7eb;
+    }
+
+    /* WHY / ABOUT */
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .pill {
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .why-text {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .why-list {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .why-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      margin-top: 0.4rem;
+      background: #38bdf8;
+    }
+
+    .why-card {
+      background: radial-gradient(circle at top, rgba(37, 99, 235, 0.25), transparent 55%),
+        rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(30, 64, 175, 0.8);
+      font-size: 0.86rem;
+      color: var(--muted);
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.9);
+    }
+
+    .why-card strong {
+      color: #e5e7eb;
+    }
+
+    .why-card-layout {
+      display: grid;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .why-tag-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #64748b;
+    }
+
+    /* DESTINATIONS */
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .dest-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(30, 64, 175, 0.8);
+      background: #020617;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
+      display: flex;
+      flex-direction: column;
+      min-height: 230px;
+    }
+
+    .dest-photo {
+      position: relative;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .dest-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      filter: saturate(1.1);
+    }
+
+    .dest-label {
+      position: absolute;
+      inset: 10px auto auto 10px;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 0.18rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: #e5e7eb;
+    }
+
+    .dest-body {
+      padding: 0.9rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+    }
+
+    .dest-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .dest-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.35rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .dest-price {
+      color: #f97316;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+
+    /* PACKAGES */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .package-card {
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), #020617);
+      border-radius: 18px;
+      padding: 1.1rem 1.1rem 1.1rem;
+      border: 1px solid rgba(30, 64, 175, 0.85);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.95);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.86rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .package-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.18), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .package-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .package-name {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .package-tag {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.85);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .package-price {
+      color: #fb923c;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+    }
+
+    .package-list {
+      list-style: none;
+      display: grid;
+      gap: 0.4rem;
+      margin: 0.3rem 0 0.3rem;
+    }
+
+    .package-item {
+      display: flex;
+      gap: 0.4rem;
+      align-items: flex-start;
+    }
+
+    .package-dot {
+      margin-top: 0.35rem;
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: #38bdf8;
+    }
+
+    .package-footer {
+      margin-top: 0.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .package-footer a {
+      color: #38bdf8;
+    }
+
+    .package-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* STEPS */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .step-card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 16px;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .step-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      color: #e0f2fe;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #e5e7eb;
+    }
+
+    /* TESTIMONIALS */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.1rem;
+    }
+
+    .testi-card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 16px;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      font-size: 0.86rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .testi-quote {
+      font-style: italic;
+      font-size: 0.86rem;
+    }
+
+    .testi-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #cbd5f5;
+    }
+
+    .testi-name {
+      font-weight: 600;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: radial-gradient(circle at top, rgba(37, 99, 235, 0.35), transparent 60%),
+        rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(30, 64, 175, 0.9);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.95);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-card strong {
+      color: #e5e7eb;
+    }
+
+    .contact-row {
+      margin-top: 0.8rem;
+      display: grid;
+      gap: 0.55rem;
+      font-size: 0.86rem;
+    }
+
+    .contact-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+
+    .contact-value {
+      font-size: 0.93rem;
+    }
+
+    .contact-value a {
+      color: #38bdf8;
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.86rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(51, 65, 85, 0.95);
+      background: rgba(15, 23, 42, 0.98);
+      padding: 0.6rem 0.75rem;
+      color: var(--text);
+      font: inherit;
+      outline: none;
+      resize: vertical;
+      min-height: 40px;
+      transition: border-color 0.16s ease-out, box-shadow 0.16s ease-out, background 0.16s ease-out;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(56, 189, 248, 0.9);
+      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    textarea {
+      min-height: 110px;
+    }
+
+    #form-status {
+      font-size: 0.78rem;
+      color: #9ca3af;
+      margin-top: 0.3rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(30, 64, 175, 0.7);
+      padding: 1.1rem 1.25rem 2rem;
+      font-size: 0.8rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    footer span {
+      color: #9ca3af;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .why-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .dest-grid,
+      .packages-grid,
+      .steps-grid,
+      .testi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-card-main {
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        padding-inline: 0.9rem;
+      }
+
+      main {
+        padding-inline: 1rem;
+      }
+
+      section {
+        padding: 2.5rem 0;
+      }
+
+      .dest-grid,
+      .packages-grid,
+      .steps-grid,
+      .testi-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card-main {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="nav">
+      <div class="logo-wrap">
+        <div class="logo-badge">
+          <div class="logo-inner">S</div>
+        </div>
+        <div class="logo-text">
+          <div class="logo-title">Shakty Travel</div>
+          <div class="logo-sub">Premium Travel & Tour Agency</div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#why">Keunggulan</a>
+        <a href="#destinations">Destinasi</a>
+        <a href="#packages">Paket</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <a
+        href="https://wa.me/6285863189020?text=Halo%20Shakty%20Travel%2C%20saya%20ingin%20tanya%20paket%20travel."
+        class="nav-cta"
+        target="_blank"
+        rel="noopener"
+      >
+        <span>💬 WhatsApp</span>
+        <small>085863189020</small>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          Liburan tenang, semua diurus Shakty Travel
+        </div>
+
+        <h1 class="hero-title">
+          Rencanakan <span>Perjalanan Impian</span> Anda bersama Shakty Travel
+        </h1>
+
+        <p class="hero-text">
+          <strong>Shakty Travel</strong> adalah agen travel profesional yang membantu Anda merancang
+          liburan, honeymoon, dan perjalanan keluarga dengan nyaman. Tiket, hotel, dan itinerary
+          kami siapkan — Anda tinggal menikmati perjalanan.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            href="https://wa.me/6285863189020?text=Halo%20Shakty%20Travel%2C%20saya%20ingin%20konsultasi%20paket%20liburan."
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener"
+          >
+            ✈️ Konsultasi via WhatsApp
+          </a>
+          <a href="#packages" class="btn btn-ghost">
+            📦 Lihat paket favorit
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div>
+            <span>200+</span>
+            Pelanggan puas
+          </div>
+          <div>
+            <span>5+</span>
+            Tahun pengalaman
+          </div>
+          <div>
+            <span>15+</span>
+            Destinasi populer
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-orbit"></div>
+
+        <div class="hero-card-main">
+          <div class="hero-card-header">
+            <div>
+              <div class="hero-card-title">Highlight Destinasi</div>
+              <div class="hero-card-sub">Suasana liburan bersama Shakty Travel</div>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              Jadwal Fleksibel
+            </div>
+          </div>
+
+          <div class="hero-gallery">
+            <div class="hero-photo-large">
+              <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pemandangan pantai tropis" />
+              <div class="hero-photo-pill">
+                Bali & Nusa Penida
+                <span>🌊 Pantai, sunset, dan aktivitas seru</span>
+              </div>
+            </div>
+            <div class="hero-photo-small-col">
+              <div class="hero-photo-small">
+                <img src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bangunan klasik Eropa" />
+              </div>
+              <div class="hero-photo-small">
+                <img src="https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800" alt="Pegunungan dan danau" />
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card-footer">
+            <div>
+              <div class="hero-card-stat-label">Mulai dari</div>
+              <div class="hero-card-stat-value">IDR 1,9 Juta / orang</div>
+            </div>
+            <div class="hero-chip">
+              ✉️ Email: agungmandala65@gmail.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY / ABOUT -->
+    <section id="why">
+      <div class="section-kicker">Mengapa Shakty Travel?</div>
+      <h2 class="section-title">
+        Pengalaman <span>traveling</span> yang nyaman & terencana
+      </h2>
+      <p class="section-subtitle">
+        Kami memahami bahwa setiap traveler punya gaya dan kebutuhan berbeda. Shakty Travel membantu
+        menyusun paket yang sesuai dengan budget, waktu, dan jenis liburan yang Anda inginkan.
+      </p>
+
+      <div class="why-grid">
+        <div>
+          <div class="pill-list">
+            <span class="pill">Custom Itinerary</span>
+            <span class="pill">Group Tour & Private Trip</span>
+            <span class="pill">Domestik & Internasional</span>
+          </div>
+
+          <p class="why-text">
+            Mulai dari liburan singkat di dalam negeri sampai honeymoon ke luar negeri,
+            kami siapkan semua detail perjalanan Anda: tiket, penginapan, hingga aktivitas seru.
+          </p>
+
+          <ul class="why-list">
+            <li class="why-item">
+              <span class="why-bullet"></span>
+              <span>Tim berpengalaman yang siap membantu dari proses booking hingga pulang.</span>
+            </li>
+            <li class="why-item">
+              <span class="why-bullet"></span>
+              <span>Pilihan paket fleksibel: bisa ikut paket yang sudah jadi atau request khusus.</span>
+            </li>
+            <li class="why-item">
+              <span class="why-bullet"></span>
+              <span>Partner hotel, transport, dan operator lokal terpercaya di berbagai kota.</span>
+            </li>
+            <li class="why-item">
+              <span class="why-bullet"></span>
+              <span>Support penuh via WhatsApp selama perjalanan.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="why-card">
+          <strong>Layanan utama Shakty Travel:</strong>
+          <div class="why-card-layout">
+            <div>
+              <div class="why-tag-label">01 • Paket Liburan</div>
+              <p>
+                Paket liburan keluarga, couple, dan rombongan ke berbagai destinasi favorit
+                di Indonesia dan luar negeri.
+              </p>
+            </div>
+            <div>
+              <div class="why-tag-label">02 • Honeymoon & Anniversary</div>
+              <p>
+                Liburan romantis dengan hotel pilihan, dekorasi spesial, dan pengalaman yang
+                dirancang berkesan.
+              </p>
+            </div>
+            <div>
+              <div class="why-tag-label">03 • Corporate & Gathering</div>
+              <p>
+                Perjalanan dinas, outing kantor, dan trip perusahaan lengkap dengan kebutuhan
+                meeting dan aktivitas team building.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations">
+      <div class="section-kicker">Destinasi Favorit</div>
+      <h2 class="section-title">
+        Pilihan destinasi <span>terlaris</span>
+      </h2>
+      <p class="section-subtitle">
+        Berikut beberapa destinasi yang sering dipilih pelanggan kami. Paket bisa disesuaikan
+        dengan tanggal keberangkatan dan jumlah peserta.
+      </p>
+
+      <div class="dest-grid">
+        <article class="dest-card">
+          <div class="dest-photo">
+            <img src="https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bali" />
+            <div class="dest-label">🌴 Bali, Indonesia</div>
+          </div>
+          <div class="dest-body">
+            <h3 class="dest-title">Bali & Nusa Penida</h3>
+            <p>
+              Pantai, sunset, Ubud, Nusa Penida, dan spot hits lainnya. Cocok untuk keluarga dan pasangan.
+            </p>
+            <div class="dest-meta">
+              <span>Durasi 3–5 hari</span>
+              <span class="dest-price">Mulai ± IDR 2,5 Juta</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-photo">
+            <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Labuan Bajo" />
+            <div class="dest-label">⛵ Labuan Bajo</div>
+          </div>
+          <div class="dest-body">
+            <h3 class="dest-title">Labuan Bajo & Komodo</h3>
+            <p>
+              Sailing trip, island hopping, snorkeling, dan melihat komodo di habitat aslinya.
+            </p>
+            <div class="dest-meta">
+              <span>Durasi 3–4 hari</span>
+              <span class="dest-price">Mulai ± IDR 3,8 Juta</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-photo">
+            <img src="https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800" alt="Luar negeri" />
+            <div class="dest-label">🌍 Luar Negeri</div>
+          </div>
+          <div class="dest-body">
+            <h3 class="dest-title">Singapore / Malaysia / Thailand</h3>
+            <p>
+              Trip singkat ke luar negeri untuk city tour, kuliner, dan belanja. Cocok untuk first-time traveler.
+            </p>
+            <div class="dest-meta">
+              <span>Durasi 3–5 hari</span>
+              <span class="dest-price">Mulai ± IDR 4 Juta</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p style="color: var(--muted); font-size: 0.8rem; margin-top: 0.7rem;">
+        *Harga di atas estimasi. Untuk harga pasti, silakan hubungi Shakty Travel karena dapat berubah sesuai
+        tanggal keberangkatan, jumlah peserta, dan season.
+      </p>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages">
+      <div class="section-kicker">Paket Liburan</div>
+      <h2 class="section-title">
+        Paket <span>unggulan</span> Shakty Travel
+      </h2>
+      <p class="section-subtitle">
+        Pilih paket yang paling cocok, atau hubungi kami untuk dibuatkan paket custom sesuai kebutuhan.
+      </p>
+
+      <div class="packages-grid">
+        <article class="package-card">
+          <div class="package-header">
+            <div>
+              <h3 class="package-name">Paket Family Getaway</h3>
+              <div class="package-price">Mulai ± IDR 2,3 Juta / orang</div>
+            </div>
+            <span class="package-tag">Keluarga</span>
+          </div>
+          <ul class="package-list">
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Hotel keluarga, kendaraan nyaman, dan driver lokal.</span>
+            </li>
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Itinerary santai dengan kombinasi wisata alam & kuliner.</span>
+            </li>
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Opsional: dokumentasi foto profesional.</span>
+            </li>
+          </ul>
+          <div class="package-footer">
+            <span>Min. 4 orang</span>
+            <a
+              href="https://wa.me/6285863189020?text=Halo%20Shakty%20Travel%2C%20saya%20ingin%20info%20Paket%20Family%20Getaway."
+              target="_blank"
+              rel="noopener"
+            >
+              Chat untuk detail →
+            </a>
+          </div>
+        </article>
+
+        <article class="package-card">
+          <div class="package-header">
+            <div>
+              <h3 class="package-name">Paket Honeymoon</h3>
+              <div class="package-price">Mulai ± IDR 4,5 Juta / pasangan</div>
+            </div>
+            <span class="package-tag">Couple</span>
+          </div>
+          <ul class="package-list">
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Hotel romantis dengan dekorasi khusus honeymoon.</span>
+            </li>
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Candle light dinner dan aktivitas couple pilihan.</span>
+            </li>
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Itinerary fleksibel, bisa disesuaikan gaya liburan kalian.</span>
+            </li>
+          </ul>
+          <div class="package-footer">
+            <span>Private trip</span>
+            <a
+              href="https://wa.me/6285863189020?text=Halo%20Shakty%20Travel%2C%20saya%20ingin%20info%20Paket%20Honeymoon."
+              target="_blank"
+              rel="noopener"
+            >
+              Chat untuk detail →
+            </a>
+          </div>
+        </article>
+
+        <article class="package-card">
+          <div class="package-header">
+            <div>
+              <h3 class="package-name">Paket Group & Corporate</h3>
+              <div class="package-price">Harga by request</div>
+            </div>
+            <span class="package-tag">Rombongan</span>
+          </div>
+          <ul class="package-list">
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Trip untuk perusahaan, komunitas, sekolah, atau instansi.</span>
+            </li>
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Bus / transportasi, hotel, meeting room, dan konsumsi.</span>
+            </li>
+            <li class="package-item">
+              <span class="package-dot"></span>
+              <span>Team building, outing, dan aktivitas kebersamaan lainnya.</span>
+            </li>
+          </ul>
+          <div class="package-footer">
+            <span>Min. 15 orang</span>
+            <a
+              href="https://wa.me/6285863189020?text=Halo%20Shakty%20Travel%2C%20saya%20ingin%20buat%20trip%20rombongan%20%2F%20corporate."
+              target="_blank"
+              rel="noopener"
+            >
+              Konsultasi gratis →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section>
+      <div class="section-kicker">Cara Pemesanan</div>
+      <h2 class="section-title">
+        Proses mudah, <span>3 langkah</span> saja
+      </h2>
+      <p class="section-subtitle">
+        Kami buat proses pemesanan sesederhana mungkin, sehingga Anda tidak perlu pusing dengan detail teknis.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">Hubungi Shakty Travel</div>
+          <p>
+            Ceritakan rencana liburan Anda: tujuan, jumlah orang, tanggal, dan kisaran budget.
+            Bisa lewat WhatsApp atau email.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">Dapatkan rekomendasi & penawaran</div>
+          <p>
+            Kami akan mengirim beberapa opsi paket & itinerary. Silakan pilih atau minta penyesuaian
+            sampai cocok.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">Konfirmasi & berangkat</div>
+          <p>
+            Setelah deal dan pembayaran DP, semua kebutuhan Anda kami urus. Tinggal packing dan berangkat
+            sesuai jadwal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section>
+      <div class="section-kicker">Testimoni</div>
+      <h2 class="section-title">
+        Kata <span>pelanggan</span> Shakty Travel
+      </h2>
+      <p class="section-subtitle">
+        Beberapa ulasan singkat dari pelanggan yang pernah berangkat bersama kami.
+      </p>
+
+      <div class="testi-grid">
+        <article class="testi-card">
+          <p class="testi-quote">
+            “Pelayanan ramah dari awal sampai akhir. Itinerary tidak terlalu padat tapi tetap banyak tempat yang dikunjungi.
+            Anak-anak juga sangat menikmati perjalanannya.”
+          </p>
+          <div class="testi-footer">
+            <span class="testi-name">Rina & Keluarga</span>
+            <span>Bali Family Trip</span>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-quote">
+            “Terima kasih Shakty Travel, honeymoon kami sangat berkesan. Hotelnya bagus, view luar biasa,
+            dan semua request kami diakomodasi dengan baik.”
+          </p>
+          <div class="testi-footer">
+            <span class="testi-name">Adi & Sinta</span>
+            <span>Paket Honeymoon</span>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <p class="testi-quote">
+            “Trip kantor berjalan lancar, mulai dari transport, penginapan, hingga acara gathering.
+            Rundown rapi dan tim sangat responsif di lapangan.”
+          </p>
+          <div class="testi-footer">
+            <span class="testi-name">HRD Perusahaan</span>
+            <span>Corporate Trip</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-kicker">Kontak</div>
+      <h2 class="section-title">
+        Konsultasi <span>gratis</span> dengan Shakty Travel
+      </h2>
+      <p class="section-subtitle">
+        Silakan hubungi kami melalui WhatsApp, email, atau isi form di bawah. Kami siap membantu
+        merancang perjalanan terbaik untuk Anda.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <strong>Info kontak Shakty Travel</strong>
+          <div class="contact-row">
+            <div>
+              <div class="contact-label">WhatsApp</div>
+              <div class="contact-value">
+                <a
+                  href="https://wa.me/6285863189020?text=Halo%20Shakty%20Travel%2C%20saya%20ingin%20tanya%20paket%20travel."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  085863189020
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:agungmandala65@gmail.com">agungmandala65@gmail.com</a>
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Jam Layanan</div>
+              <div class="contact-value">
+                Setiap hari, pukul 09.00 – 21.00 WIB
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Lokasi</div>
+              <div class="contact-value">
+                Berbasis di Indonesia, melayani keberangkatan domestik & internasional.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form onsubmit="handleSubmit(event)">
+            <div>
+              <label for="name">Nama</label>
+              <input id="name" name="name" type="text" placeholder="Nama lengkap Anda" required />
+            </div>
+            <div>
+              <label for="contactField">Kontak (WhatsApp / Email)</label>
+              <input
+                id="contactField"
+                name="contact"
+                type="text"
+                placeholder="Contoh: 08xx-xxxx-xxxx atau email@domain.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="destination">Tujuan / Destinasi</label>
+              <input
+                id="destination"
+                name="destination"
+                type="text"
+                placeholder="Contoh: Bali, Labuan Bajo, Singapore, dll."
+              />
+            </div>
+            <div>
+              <label for="message">Pesan</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Ceritakan rencana perjalanan Anda (jumlah orang, tanggal, estimasi budget)..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              🚀 Kirim permintaan penawaran via WhatsApp
+            </button>
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Shakty Travel. Website resmi agen travel & tour.
+  </footer>
+
+  <script>
+    // Tahun otomatis
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Submit form langsung ke WhatsApp
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value.trim();
+      var contact = document.getElementById("contactField").value.trim();
+      var destination = document.getElementById("destination").value.trim();
+      var message = document.getElementById("message").value.trim();
+      var status = document.getElementById("form-status");
+
+      if (!name || !contact || !message) {
+        status.textContent = "Mohon lengkapi nama, kontak, dan pesan.";
+        return;
+      }
+
+      var waNumber = "6285863189020"; // nomor WA Shakty Travel
+      var text =
+        "Halo Shakty Travel,%0A" +
+        "Saya " + name + ".%0A" +
+        "Kontak: " + contact + "%0A" +
+        (destination ? "Tujuan/destinasi: " + destination + "%0A" : "") +
+        "Pesan: " + message;
+
+      var waUrl = "https://wa.me/" + waNumber + "?text=" + text;
+
+      status.textContent = "Mengarahkan ke WhatsApp...";
+      window.open(waUrl, "_blank");
+
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
